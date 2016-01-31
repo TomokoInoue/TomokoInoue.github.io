@@ -13,7 +13,7 @@ $(function(){
 		// 経度
 		lat = evt.coords.latitude;
 	},
-	function(erro){
+	function(error){
 		console.log('GPS取れなかったよー');
 	});
 
