@@ -20,7 +20,6 @@ a:hover{
 #wrapper{
 	width:100%;
 	margin: 20px 0;
-	background-color: #FF0000;
 }
 
 .inner {
@@ -35,7 +34,6 @@ a:hover{
 	#wrapper{
 		width:950px;
 		margin: 40px auto 0;
-		background-color: #0000FF;
 	}
 
 	.inner {
@@ -111,6 +109,11 @@ nav li a:link, nav li a:visited {
 }
 
 @media screen and (min-width:768px) {
+
+	nav ul {
+		border-top: none;
+	}
+
 	nav ul li{
 		width:150px;
 		float:left;
@@ -134,11 +137,31 @@ nav li a:link, nav li a:visited {
 /* mainVisual -------------------------*/
 #mainVisual{
 	margin-bottom:40px;
+	width: 100%;
 }
 
+#mainVisual img {
+	width: 100%;
+	max-width: 100%;
+}
+
+
+@media screen and (min-width:768px) {
+
+	#mainVisual{
+		width: 950px;
+		margin-bottom:40px;
+	}
+	#mainVisual img{
+		width: 950px;
+	}
+}
 /* container --------------------------*/
 #container{
 	overflow: hidden;
+	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box; /* paddingもwidthに含まれる */
 }
 
 /* container common */
@@ -150,15 +173,35 @@ nav li a:link, nav li a:visited {
 	margin-bottom:10px;
 	font-family:Arial, Helvetica, sans-serif;
 }
+
 .moreLink{
 	margin:10px 0;
 	text-align:right;
+
+@media screen and (min-width:768px) {
+
+	#container{
+		overflow: hidden;
+	}
+
+	/* container common */
+	#whatsNew h2,
+	#about h2,
+	#todaysMenu h2{
+		border-bottom:1px #000 solid;
+		padding-bottom:5px;
+		margin-bottom:10px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.moreLink{
+		margin:10px 0;
+		text-align:right;
+	}
 }
 
 /*whatsNew*/
 #whatsNew{
 	width:310px;
-	float:left;
 }
 #whatsNew dt{
 	font-size:11px;
@@ -173,29 +216,68 @@ nav li a:link, nav li a:visited {
 	border-bottom:none;
 }
 
+@media screen and (min-width:768px) {
+	#whatsNew{
+		width:310px;
+		float:left;
+	}
+}
+
+
 /*about*/
 #about{
 	width:310px;
-	float:left;
-	margin:0 10px;
+	margin:0;
 }
 #about img{
-	width:310px;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+@media screen and (min-width:768px) {
+	#about{
+		width:310px;
+		float:left;
+		margin:0 10px;
+	}
+	#about img{
+		width:310px;
+	}
 }
 
 /*todaysMenu*/
 #todaysMenu{
 	width:310px;
-	float:right;
 }
 #menu01{
-	width:150px;
-	float:left;
+	width:100%;
+	overflow: hidden;
 }
 
 #menu02{
-	width:150px;
-	float:right;
+	width:100%;
+	overflow: hidden;
+}
+
+.thumb {
+
+}
+
+@media screen and (min-width:768px) {
+	#todaysMenu{
+		width:310px;
+		float:right;
+	}
+	#menu01{
+		width:150px;
+		float:left;
+	}
+
+	#menu02{
+		width:150px;
+		float:right;
+	}
 }
 
 
@@ -211,4 +293,10 @@ footer p{
 	font-size:10px;
 	color:#666666;
 	font-family:Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width:768px) {
+	footer p{
+		text-align:right;
+	}
 }
