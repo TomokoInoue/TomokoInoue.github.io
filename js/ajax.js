@@ -8,14 +8,14 @@ $(function(){
 
 		// ajaxでロード
 		$.ajax({
-			url:'omikuji.html',
+			url:'mydata.json',
 			type:'GET',
-			dataType:'html'
+			dataType:'json'
 		}).done(function(data){
 			//成功
 			console.log(data);
 
-			showContent(data);
+			// showContent(data);
 
 		}).fail(function(){
 			// 失敗
