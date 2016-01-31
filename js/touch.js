@@ -9,9 +9,9 @@ $(function(){
 	// GPS
 	navigator.geolocation.getCurrentPosition(function(evt){
 		// 緯度
-		var lon = evt.coords.longitude;
+		lon = evt.coords.longitude;
 		// 経度
-		var lat = evt.coords.longitude;
+		lat = evt.coords.longitude;
 	},
 	function(erro){
 		console.log('GPS取れなかったよー');
