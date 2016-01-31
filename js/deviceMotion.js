@@ -1,7 +1,7 @@
 $(function() {
 
 	// 加速度のイベント
-	window.addEventListener('deviceMotion', shakeDevice);
+	window.addEventListener('devicemotion', shakeDevice);
 
 
 	function shakeDevice(evt) {
