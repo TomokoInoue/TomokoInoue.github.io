@@ -1,0 +1,60 @@
+<nav>
+	<ul>
+		<li><a href="#">HOME</a></li>
+		<li><a href="#">ABOUT</a></li>
+		<li><a href="#">MENU</a></li>
+		<li><a href="#">ACCESS</a></li>
+		<li><a href="#">BLOG</a></li>
+		<li><a href="#">CONTACT</a></li>
+	</ul>
+</nav>
+
+<div id="mainVisual">
+	<img src="img/main.jpg" alt="welcome to SHELF CAFE">
+</div>
+<!-- mainVisual -->
+
+<div id="container">
+	<section id="whatsNew">
+		<h2>WHAT'S NEW</h2>
+			<dl>
+				<dt>2015.04.24</dt>
+				<dd><a href="#">SHELF CAFEがオープンいたします。</a></dd>
+				<dt>2015.04.11</dt>
+				<dd><a href="#">【GALLERY】5月1日より世界の絵本展を開催します。</a></dd>
+			</dl>
+	</section>
+	<!-- whatsNew -->
+
+	<section id="about">
+		<h2>ABOUT</h2>
+		<p><img src="img/ph_about.jpg" alt=""></p>
+		<p>SHELF CAFEでは、国内外の書籍をセレクトしています。普段、なかなか手に取ることのない貴重な書籍が揃っています。美味しいコーヒーが飲める図書館感覚でお楽しみいただけます。</p>
+		<p class="moreLink"><a href="#">詳しくはこちらから</a></p>
+	</section>
+	<!-- about -->
+
+	<article id="todaysMenu">
+		<h2>TODAY'S MENU</h2>
+		<section id="menu01">
+			<div class="thumb"><img src="img/ph_menu01.jpg" alt="ベーコンエッグセット"></div>
+			<h3>ベーコンエッグセット</h3>
+			<p>￥1,480</p>
+			<p class="moreLink"><a href="#">詳しくはこちらから</a></p>
+		</section>
+		<!-- menu01 -->
+		<section id="menu02">
+			<div class="thumb"><img src="img/ph_menu02.jpg" alt="ブルーベリースコーン"></div>
+			<h3>ブルーベリースコーン</h3>
+			<p>￥580</p>
+			<p class="moreLink"><a href="#">詳しくはこちらから</a></p>
+		</section>
+		<!-- menu02 -->
+	</article>
+	<!-- todaysMenu -->
+</div>
+<!-- container -->
+
+<footer>
+	<p><small>Copyright &copy; SHELF CAFE. All Rights Reserved.</small></p>
+</footer>
