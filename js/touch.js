@@ -15,6 +15,7 @@ $(function(){
 	},
 	function(error){
 		console.log('GPS取れなかったよー');
+		alert('GPS取れなかったよー');
 	});
 
 
