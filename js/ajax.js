@@ -8,7 +8,7 @@ $(function(){
 
 		// ajaxでロード
 		$.ajax({
-			url:'mydata.json',
+			url:'../mydata.json',
 			type:'GET',
 			dataType:'json'
 		}).done(function(data){
