@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* common ---------------------- */
+body{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:12px;
+	line-height:1.5;
+}
+a{
+	color:#0099cc;
+	text-decoration: underline;
+}
+a:hover{
+	color:#F60;
+	text-decoration: underline;
+}
+
+#wrapper{
+	width:950px;
+	margin: 40px auto 0;
+}
+
+/* header ------------------------*/
+header{
+	width:950px;
+	height:80px;
+	position:relative;
+}
+header h1{
+	width:221px;
+	height:28px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+header p{
+	width:350px;
+	height:28px;
+	position:absolute;
+	left:240px;
+	top:0;
+}
+
+
+/* nav -------------------------*/
+nav ul li{
+	width:150px;
+	float:left;
+	border-bottom:1px #000 solid;
+	padding-bottom:5px;
+	margin-bottom:30px;
+	margin-right:10px;
+}
+nav ul li:last-child{
+	margin-right:0;
+}
+nav ul li a{
+	color:#000;
+	text-decoration:none;
+	width:150px;
+	display:block;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/* mainVisual -------------------------*/
+#mainVisual{
+	margin-bottom:40px;
+}
+
+/* container --------------------------*/
+#container{
+	overflow: hidden;
+}
+
+/* container common */
+#whatsNew h2,
+#about h2,
+#todaysMenu h2{
+	border-bottom:1px #000 solid;
+	padding-bottom:5px;
+	margin-bottom:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.moreLink{
+	margin:10px 0;
+	text-align:right;
+}
+
+/*whatsNew*/
+#whatsNew{
+	width:310px;
+	float:left;
+}
+#whatsNew dt{
+	font-size:11px;
+	color:#333;
+}
+#whatsNew dd{
+	border-bottom:1px #999 solid;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+#whatsNew dd:last-child{
+	border-bottom:none;
+}
+
+/*about*/
+#about{
+	width:310px;
+	float:left;
+	margin:0 10px;
+}
+#about img{
+	width:310px;
+}
+
+/*todaysMenu*/
+#todaysMenu{
+	width:310px;
+	float:right;
+}
+#menu01{
+	width:150px;
+	float:left;
+}
+
+#menu02{
+	width:150px;
+	float:right;
+}
+
+
+
+/* footer --------------------------*/
+footer{
+	margin:40px 0;
+	border-top:1px #000 solid;
+	padding-top:20px;
+}
+footer p{
+	text-align:right;
+	font-size:10px;
+	color:#666666;
+	font-family:Arial, Helvetica, sans-serif;
+}
