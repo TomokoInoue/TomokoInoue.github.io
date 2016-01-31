@@ -15,7 +15,7 @@ $(function(){
 			//成功
 			console.log(data);
 
-			// showContent(data);
+			showContent(data);
 
 		}).fail(function(){
 			// 失敗
@@ -27,6 +27,10 @@ $(function(){
 	function showContent(data){
 
 		$('#container').append(data);
+
+		for(var cnt = 0; cnt < data.length; cnt++){
+			$('#container li').eq(cnt).text(data[cnt].name);
+		}
 	}
 
 
