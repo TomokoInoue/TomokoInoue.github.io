@@ -11,7 +11,7 @@ $(function(){
 		// 緯度
 		lon = evt.coords.longitude;
 		// 経度
-		lat = evt.coords.longitude;
+		lat = evt.coords.latitude;
 	},
 	function(erro){
 		console.log('GPS取れなかったよー');
