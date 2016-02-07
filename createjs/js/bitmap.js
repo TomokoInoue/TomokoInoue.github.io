@@ -37,7 +37,7 @@ $(function(){
 		var hourensou = new createjs.Bitmap(manifest[2].src);
 		pumpkin.x = 100;
 		pumpkin.y = 600;
-		stage.addChild(pumpkin);
+		stage.addChild(hourensou);
 
 		stage.update();
 	}
