@@ -9,7 +9,7 @@ $(function(){
 		// 定数
 		const apikey = '9600dda65548f3a5f458aa5ab8721019';
 		// openweathermapのお天気情報のURL
-		var url = 'api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + apikey;
+		var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + apikey;
 
 
 		$.ajax({
@@ -22,5 +22,11 @@ $(function(){
 		}).fail(function(){
 			console.log('ajax error!!!');
 		});
+
+
+		// htmlに表示する関数
+		function showWeather(data){
+			console.log(data);
+		}
 	});
 });
