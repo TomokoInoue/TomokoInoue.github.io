@@ -34,9 +34,11 @@ $(function(){
 		stage.addChild(pumpkin);
 
 		var hourensou = new createjs.Bitmap(manifest[2].src);
-		pumpkin.x = 100;
-		pumpkin.y = 600;
+		hourensou.x = 100;
+		hourensou.y = 600;
 		stage.addChild(hourensou);
+
+		stage.update();
 
 	}
 
