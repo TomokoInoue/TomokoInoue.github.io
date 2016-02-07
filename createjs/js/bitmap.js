@@ -19,7 +19,6 @@ $(function(){
 
 	loadQueue.addEventListener('complete', function(){
 		console.log('読み込み完了');
-
 		showVege();
 	});
 
@@ -39,7 +38,6 @@ $(function(){
 		pumpkin.y = 600;
 		stage.addChild(hourensou);
 
-		stage.update();
 	}
 
 
