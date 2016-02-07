@@ -40,6 +40,24 @@ $(function(){
 			// 湿度
 			var areaHumidity = data.main.humidity;
 			$('#areaHumidity').text(areaHumidity + '%');
+
+			// 天気
+			var areaWeather = data.weather[0].description;
+			$('#areaWeather').text(areaWeather);
+
+			// 天気アイコン
+			var weatherIcon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+			$('#weatherIcon').append('<img src="'+ weatherIcon +'">');
+
+
+
+
+
+
 		}
+
+
+
+
 	});
 });
