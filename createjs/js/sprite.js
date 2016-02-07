@@ -1,7 +1,7 @@
 // 先読みするリスト
 var manifest = [
-	{src:'img/tomato.png'},
-	{src:'img/pumpkin.png'},
+	{src:'img/vitaminC.png'},
+	{src:'img/iron.png'},
 	{src:'img/hourensou.png'}
 ];
 
