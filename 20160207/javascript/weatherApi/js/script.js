@@ -32,6 +32,8 @@ $(function(){
 			// 地域名
 			var areaName = data.name;
 			$('#areaName').text(areaName);
+			// $('#htmlのid名').text(変数);
+				// text = テキスト形式で出力
 
 			// 気温
 			var areaTemp = data.main.temp;
@@ -49,6 +51,7 @@ $(function(){
 			// 天気アイコン
 			var weatherIcon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 			$('#weatherIcon').append('<img src="'+ weatherIcon +'">');
+				// append = 画像形式で出力
 
 
 
