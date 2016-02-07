@@ -3,6 +3,6 @@ var vitaminCSprite = {
 	frames:{width:160, height:160},
 	aimations:{
 		stand:34,
-		walk:[0, 33]
+		walk:[0,33]
 	}
 }
