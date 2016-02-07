@@ -1,12 +1,3 @@
-// 先読みするリスト
-var manifest = [
-	{src:'img/calcium.png'},
-	{src:'img/iron.png'},
-	{src:'img/vitaminC.png'}
-];
-
-
-
 // DOMを読み込んだら
 $(function(){
 
@@ -26,25 +17,42 @@ $(function(){
 	function showVege(){
 		// スプライトシートの設定
 		var vcSprite = new createjs.SpriteSheet(vitaminCSprite);
+		var ironSprite = new createjs.SpriteSheet(ironSprite);
+
 		// スプライトの設定
 		var vitaminC = new createjs.Sprite(vcSprite, 'stand');
 		stage.addChild(vitaminC);
 		vitaminC.x = 150;
 		vitaminC.y = 480;
 		vitaminC.alpha = 0;
+
+		var iron = new createjs.Sprite(ironSprite, 'stand');
+		stage.addChild(iron);
+		iron.x = 150;
+		iron.y = 1000;
+		iron.alpha = 0;
+
 		// アニメーション
 		createjs.Tween.get(vitaminC).to({alpha:1},500).wait(1000).call(vitaminCWalk).to({x:500},4000).call(vitaminCStand);
 			// call = functionを呼び出す
+		createjs.Tween.get(iron).to({alpha:1},500).wait(2000).call(ironWalk).to({x:500},4000).call(ironStand);
 
 		// ビタミンCが歩く
 		function vitaminCWalk(){
 			vitaminC.gotoAndPlay('walk');
 			// gotoAndPlay = スプライトを走らせる命令
 		}
-
 		// ビタミンCが止まる
 		function vitaminCStand(){
 			vitaminC.gotoAndPlay('stand');
+		}
+
+
+		function ironWalk(){
+			iron.gotoAndPlay('walk');
+		}
+		function ironStand(){
+			iron.gotoAndPlay('stand');
 		}
 
 
