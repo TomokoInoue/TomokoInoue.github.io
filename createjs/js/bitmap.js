@@ -2,7 +2,7 @@
 var manifest = [
 	{src:'img/tomato.png'},
 	{src:'img/pumpkin.png'},
-	{src:'img/greenPepper.png'}
+	{src:'img/hourensou.png'}
 ];
 
 
