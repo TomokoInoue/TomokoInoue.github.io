@@ -25,8 +25,6 @@ $(function(){
 	function showVege(){
 		// スプライトシートの設定
 		var vcSprite = new createjs.SpriteSheet(vitaminCSprite);
-		var ironSprite = new createjs.SpriteSheet(ironSprite);
-
 		// スプライトの設定
 		var vitaminC = new createjs.Sprite(vcSprite, 'stand');
 		stage.addChild(vitaminC);
@@ -34,16 +32,9 @@ $(function(){
 		vitaminC.y = 480;
 		vitaminC.alpha = 0;
 
-		var iron = new createjs.Sprite(ironSprite, 'stand');
-		stage.addChild(iron);
-		iron.x = 150;
-		iron.y = 1000;
-		iron.alpha = 0;
-
 		// アニメーション
 		createjs.Tween.get(vitaminC).to({alpha:1},500).wait(1000).call(vitaminCWalk).to({x:500},4000).call(vitaminCStand);
 			// call = functionを呼び出す
-		createjs.Tween.get(iron).to({alpha:1},500).wait(2000).call(ironWalk).to({x:500},4000).call(ironStand);
 
 		// ビタミンCが歩く
 		function vitaminCWalk(){
@@ -55,6 +46,17 @@ $(function(){
 			vitaminC.gotoAndPlay('stand');
 		}
 
+
+
+		var ironSprite = new createjs.SpriteSheet(ironSprite);
+
+		var iron = new createjs.Sprite(ironSprite, 'stand');
+		stage.addChild(iron);
+		iron.x = 150;
+		iron.y = 1000;
+		iron.alpha = 0;
+
+		createjs.Tween.get(iron).to({alpha:1},500).wait(2000).call(ironWalk).to({x:500},4000).call(ironStand);
 
 		function ironWalk(){
 			iron.gotoAndPlay('walk');
