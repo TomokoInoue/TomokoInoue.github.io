@@ -18,6 +18,7 @@ $(function(){
 		}).done(function(data){
 
 			console.log(data);
+			showWeather(data);
 
 		}).fail(function(){
 			console.log('ajax error!!!');
