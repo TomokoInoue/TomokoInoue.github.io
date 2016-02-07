@@ -36,6 +36,10 @@ $(function(){
 			var areaTemp = data.main.temp;
 			areaTemp = areaTemp - 273.15;
 			$('#areaTemp').text(Math.round(areaTemp) + '度');
+
+			// 湿度
+			var areaHumidity = data.main.humidity;
+			$('#areaHumidity').text(areaHumidity + '%');
 		}
 	});
 });
