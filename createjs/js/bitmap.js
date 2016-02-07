@@ -14,7 +14,7 @@ $(function(){
 	var stage = new createjs.Stage('canvasEl');
 
 	// loadQueue ローディング
-	var loadQueue = new createjs.loadQueue();
+	var loadQueue = new createjs.LoadQueue();
 	loadQueue.loadManifest(manifest); // 読み込み開始
 
 	loadQueue.addEventListener('complete', function(){
