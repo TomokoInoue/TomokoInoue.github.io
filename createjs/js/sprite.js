@@ -1,3 +1,11 @@
+// 先読みするリスト
+var manifest = [
+	{src:'img/tomato.png'},
+	{src:'img/pumpkin.png'},
+	{src:'img/hourensou.png'}
+];
+
+
 // DOMを読み込んだら
 $(function(){
 
