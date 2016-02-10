@@ -15,11 +15,10 @@ function init() {
 	stage.addChild(target);
 
 	circle.addEventListener('pressmove', function(evt) {
-	this.x = evt.stageX;
-	this.y = evt.stageY;
-
-	stage.update();
-	});
+		var instance = evt.target;
+		instance.x = evt.stageX;
+		instance.y = evt.stageY;
+	}
 
 
 
