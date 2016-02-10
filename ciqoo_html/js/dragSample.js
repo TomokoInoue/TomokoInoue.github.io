@@ -22,7 +22,7 @@ function init() {
 		instance.y = evt.stageY;
 
 		stage.update();
-	}
+	});
 
 
 
