@@ -16,6 +16,7 @@ function init() {
 	stage.addChild(target);
 
 	circle.addEventListener('pressmove', function(evt) {
+		console.log('pressmove');
 		var instance = evt.target;
 		instance.x = evt.stageX;
 		instance.y = evt.stageY;
