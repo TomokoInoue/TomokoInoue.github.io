@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+<canvas id="demoCanvas" width="600" height="400"></canvas>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+
+<script>
+
+window.addEventListener('load',init);
+
+
+function init() {
+// code here.
+
+    var stage = new createjs.Stage("demoCanvas");
+
+    var finishTarget = new createjs.Shape();
+	finishTarget.graphics.beginFill('green').drawCircle(0, 0, 70);
+    finishTarget.x = 300;
+    finishTarget.y = 100;
+	stage.addChild(finishTarget);
+
+    var circle = new createjs.Shape();
+    circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+    circle.x = 100;
+    circle.y = 100;
+    stage.addChild(circle);
+
+
+    circle.addEventListener('pressmove',function(evt) {
+      evt.currentTarget.x = evt.stageX;
+      evt.currentTarget.y = evt.stageY;
+
+
+    });
+
+    circle.addEventListener('pressup',function(evt){
+        console.log('pressup');
+
+        var point = circle.localToLocal(0, 0,finishTarget);
+        console.log(point);
+        var isHit = finishTarget.hitTest(point.x, point.y);
+        if(isHit == true) {
+            console.log('入ったよ');
+        } else {
+            console.log('入ってないよ');
+        }
+
+        // if (evt.currentTarget.x > finishX-30 && evt.currentTarget.x < finishX+30) {
+        //     console.log('入ったよ');
+        // }
+    })
+
+    createjs.Ticker.setFPS(30);
+    createjs.Ticker.addEventListener('tick',function(){
+        stage.update();
+    });
+}
+
+
+
+
+//
+//
+// target.addEventListener('pressmove',function(e){
+//
+// e.currentTarget.x = e.stageX;
+// e.currentTarget.y = e.stageY;
+//
+// e.currentTarget.regX = imgWidth/2;
+// e.currentTarget.regY = imgHeight/2;
+//
+// stage.update();
+// });
+//
+//
+//
+//
+// // ドラッグを離した時
+// target.addEventListener('pressup',function(e){
+//
+// if(e.currentTarget.x > targetX-30 && e.currentTarget.x < targetX+30){
+//   if(e.currentTarget.y > targetY-30 && e.currentTarget.y < targetY+30){
+//
+//     console.log("あたりにはいったよ");
+//     e.currentTarget.x = targetX;
+//     e.currentTarget.y = targetY;
+//
+//     endAnimation(); //アニメーション
+//
+//   }
+// }
+// stage.update();
+// });
+// }
+</script>
+</body>
+</html>
