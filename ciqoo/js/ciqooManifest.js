@@ -1,82 +1,98 @@
 // 配置場所のオブジェクト -----------------------------------------------------
 var americaObj = [
-	// アメリカステージ
-	{
+	// アメリカステージの配置場所オブジェクト
+	{ // 左上
 		isHit:false,
 		current:'',
 		id:'1',
-		x:160,
-		y:1090,
-		posX:400,
-		posY:700
+		x:0,
+		y:400,
+		posX:310,
+		posY:680,
+		width:770,
+		height:1000
 	},
-	{
+	{ // 右上
 		isHit:false,
 		current:'',
 		id:'2',
 		x:770,
-		y:1090,
-		posX:900,
-		posY:700
+		y:400,
+		posX:810,
+		posY:680,
+		width:770,
+		height:1000
 	},
-	{
+	{ // 左下
 		isHit:false,
 		current:'',
 		id:'3',
-		x:160,
+		x:0,
 		y:1400,
-		posX:100,
-		posY:1100
+		posX:80,
+		posY:990,
+		width:770,
+		height:400
 	},
-	{
+	{ // 右下
 		isHit:false,
 		current:'',
 		id:'4',
 		x:770,
 		y:1400,
-		posX:1000,
-		posY:1100
+		posX:1010,
+		posY:990,
+		width:770,
+		height:400
 	},
 ];
 
 var asiaObj = [
-	// アジアステージ
-	{
+	// アジアステージの配置場所オブジェクト
+	{ // 左上
 		isHit:false,
 		current:'',
 		id:'1',
-		x:160,
-		y:1090,
-		posX:400,
-		posY:750
+		x:0,
+		y:400,
+		posX:310,
+		posY:660,
+		width:770,
+		height:1000
 	},
-	{
+	{ // 右上
 		isHit:false,
 		current:'',
 		id:'2',
 		x:770,
-		y:1090,
-		posX:800,
-		posY:800
+		y:400,
+		posX:790,
+		posY:660,
+		width:770,
+		height:1000
 	},
-	{
+	{ // 左下
 		isHit:false,
 		current:'',
 		id:'3',
-		x:160,
+		x:0,
 		y:1400,
-		posX:100,
-		posY:1100
+		posX:80,
+		posY:960,
+		width:770,
+		height:400
 	},
-	{
+	{ // 右下
 		isHit:false,
 		current:'',
 		id:'4',
 		x:770,
 		y:1400,
-		posX:1000,
-		posY:1100
-	}
+		posX:1010,
+		posY:960,
+		width:770,
+		height:400
+	},
 ];
 
 
@@ -197,13 +213,12 @@ var manifest = [
 		alpha:1
 	},
 	{ // ステージサウンド #14
-		src:'sound/americaStage/beat.wav',
-		group:'america',
-		alpha:1
+		src:'sound/americaStage/rythm.wav',
+		group:'america'
 	},
 
 
-//  -------------------------- < 配置スペースポジション > ----------------------------
+//  ---------------- < アメリカの配置スペースポジション > ----------------------------
 	{ // 赤・off #15
 		src:'img/positions/redPositionOff.png',
 		x:530,
@@ -271,16 +286,15 @@ var manifest = [
 		id:'bass',
 		group:'america',
 		alpha:1
-		// type:'drag'
 	},
 	{	// ベーススプライト #24
-		src:'img/americaStage/sp/bassSP.png',
+		src:'img/americaStage/sp/bassSp.png',
 		name:'bassSp',
 		id:'bassSp',
 		group:'america',
 		alpha:0,
 		spriteData:{
-			images:['img/americaStage/sp/bassSP.png'],
+			images:['img/americaStage/sp/bassSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,19]
@@ -288,9 +302,8 @@ var manifest = [
 		}
 	},
 	{ // ベースサウンド #25
-		src:'sound/americaStage/bass.wav',
-		group:'america',
-		alpha:1
+		src:'sound/americaStage/bass1.wav',
+		group:'america'
 	},
 
 
@@ -303,16 +316,15 @@ var manifest = [
 		id:'drums',
 		group:'america',
 		alpha:1
-		// type:'drag'
 	},
 	{	// ドラムスプライト #27
-		src:'img/americaStage/sp/drumsSP.png',
+		src:'img/americaStage/sp/drumsSp.png',
 		name:'drumsSp',
 		id:'drumsSp',
 		group:'america',
 		alpha:0,
 		spriteData:{
-			images:['img/americaStage/sp/drumsSP.png'],
+			images:['img/americaStage/sp/drumsSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,9]
@@ -320,9 +332,8 @@ var manifest = [
 		}
 	},
 	{ // ドラムサウンド #28
-		src:'sound/americaStage/drums.wav',
-		group:'america',
-		alpha:1
+		src:'sound/americaStage/drums1.wav',
+		group:'america'
 	},
 
 
@@ -335,7 +346,6 @@ var manifest = [
 		id:'keyboard',
 		group:'america',
 		alpha:1
-		// type:'drag'
 	},
 	{	// キーボードスプライト #30
 		src:'img/americaStage/sp/keyboardSP.png',
@@ -352,9 +362,8 @@ var manifest = [
 		}
 	},
 	{ // キーボードサウンド #31
-		src:'sound/americaStage/keyboard.wav',
-		group:'america',
-		alpha:1,
+		src:'sound/americaStage/keyboard1.wav',
+		group:'america'
 	},
 
 
@@ -367,16 +376,15 @@ var manifest = [
 		id:'guitar',
 		group:'america',
 		alpha:1
-		// type:'drag'
 	},
 	{	// ギタースプライト #33
-		src:'img/americaStage/sp/guitarSP.png',
+		src:'img/americaStage/sp/guitarSp.png',
 		name:'guitarSp',
 		id:'guitarSp',
 		group:'america',
 		alpha:0,
 		spriteData:{
-			images:['img/americaStage/sp/guitarSP.png'],
+			images:['img/americaStage/sp/guitarSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,15]
@@ -384,9 +392,8 @@ var manifest = [
 		}
 	},
 	{ // ギターサウンド #34
-		src:'sound/americaStage/guitar.wav',
-		group:'america',
-		alpha:1,
+		src:'sound/americaStage/guitar1.wav',
+		group:'america'
 	},
 
 
@@ -407,13 +414,12 @@ var manifest = [
 		alpha:1
 	},
 	{ // ステージサウンド #37
-		src:'sound/asiaStage/rythm.wav',
-		group:'asia',
-		alpha:1
+		src:'sound/asiaStage/mokugyo.wav',
+		group:'asia'
 	},
 
 
-	// -------------------------- < 配置スペースポジション > ----------------------------
+	// ------------------ < アジアの配置スペースポジション > ------------------------
 	{ // 赤・off #38
 		src:'img/positions/redPositionOff.png',
 		x:530,
@@ -481,16 +487,15 @@ var manifest = [
 		id:'tsuzumi',
 		group:'asia',
 		alpha:1
-		// type:'drag'
 	},
 	{	// 鼓スプライト #47
-		src:'img/asiaStage/sp/tsuzumiSP.png',
+		src:'img/asiaStage/sp/tsuzumiSp.png',
 		name:'tsuzumiSp',
 		id:'tsuzumiSp',
 		group:'asia',
 		alpha:0,
 		spriteData:{
-			images:['img/asiaStage/sp/tsuzumiSP.png'],
+			images:['img/asiaStage/sp/tsuzumiSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,59]
@@ -499,8 +504,7 @@ var manifest = [
 	},
 	{ // 鼓サウンド #48
 		src:'sound/asiaStage/tsuzumi1.wav',
-		group:'america',
-		alpha:1
+		group:'asia'
 	},
 
 
@@ -513,7 +517,6 @@ var manifest = [
 		id:'tekishi',
 		group:'asia',
 		alpha:1
-		// type:'drag'
 	},
 	{	// 笛子スプライト #50
 		src:'img/asiaStage/sp/tekishiSP.png',
@@ -531,8 +534,7 @@ var manifest = [
 	},
 	{ // 笛子サウンド #51
 		src:'sound/asiaStage/tekishi1.wav',
-		group:'america',
-		alpha:1
+		group:'asia'
 	},
 
 
@@ -545,16 +547,15 @@ var manifest = [
 		id:'niko',
 		group:'asia',
 		alpha:1
-		// type:'drag'
 	},
 	{	// 二胡スプライト #53
-		src:'img/asiaStage/sp/nikoSP.png',
+		src:'img/asiaStage/sp/nikoSp.png',
 		name:'nikoSp',
 		id:'nikoSp',
 		group:'asia',
 		alpha:0,
 		spriteData:{
-			images:['img/asiaStage/sp/nikoSP.png'],
+			images:['img/asiaStage/sp/nikoSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,79]
@@ -563,8 +564,7 @@ var manifest = [
 	},
 	{ // 二胡サウンド #54
 		src:'sound/asiaStage/niko1.wav',
-		group:'america',
-		alpha:1,
+		group:'asia'
 	},
 
 
@@ -577,16 +577,15 @@ var manifest = [
 		id:'koto',
 		group:'asia',
 		alpha:1
-		// type:'drag'
 	},
 	{	// 琴スプライト #56
-		src:'img/asiaStage/sp/kotoSP.png',
+		src:'img/asiaStage/sp/kotoSp.png',
 		name:'kotoSp',
 		id:'kotoSp',
 		group:'asia',
 		alpha:0,
 		spriteData:{
-			images:['img/asiaStage/sp/kotoSP.png'],
+			images:['img/asiaStage/sp/kotoSp.png'],
 			frames:{width:450, height:650},
 			animations:{
 				play:[0,29]
@@ -595,10 +594,97 @@ var manifest = [
 	},
 	{ // 琴サウンド #57
 		src:'sound/asiaStage/koto1.wav',
-		group:'asia',
-		alpha:1,
+		group:'asia'
 	},
 
+
+// アメリカステージの追加サウンド(今だけここに置かせて) -----------------------------------------------
+{ // ベースサウンド2 #58
+	src:'sound/americaStage/bass2.wav'
+},
+{ // ベースサウンド3 #59
+	src:'sound/americaStage/bass3_1.wav'
+},
+{ // ベースサウンド4 #60
+	src:'sound/americaStage/bass4.wav'
+},
+
+
+{ // ドラムサウンド2 #61
+	src:'sound/americaStage/drums2.wav'
+},
+{ // ドラムサウンド3 #62
+	src:'sound/americaStage/drums3.wav'
+},
+{ // ドラムサウンド4 #63
+	src:'sound/americaStage/drums4.wav'
+},
+
+
+{ // キーボードサウンド2 #64
+	src:'sound/americaStage/keyboard2.wav'
+},
+{ // キーボードサウンド2 #65
+	src:'sound/americaStage/keyboard3.wav'
+},
+{ // キーボードサウンド3 #66
+	src:'sound/americaStage/keyboard4.wav'
+},
+
+
+{ // ギターサウンド2 #67
+	src:'sound/americaStage/guitar2.wav'
+},
+{ // ギターサウンド3 #68
+	src:'sound/americaStage/guitar3.wav'
+},
+{ // ギターサウンド4 #69
+	src:'sound/americaStage/guitar4.wav'
+},
+
+// アジアステージの追加サウンド(今だけここに置かせて) -----------------------------------------------
+{ // 拍子木の音 #70
+	src:'sound/asiaStage/hyoushigi.wav'
+},
+{ // 鼓サウンド2 #71
+	src:'sound/asiaStage/tsuzumi2.wav'
+},
+{ // 鼓サウンド3 #72
+	src:'sound/asiaStage/tsuzumi3.wav'
+},
+{ // 鼓サウンド4 #73
+	src:'sound/asiaStage/tsuzumi4.wav'
+},
+
+{ // 笛子サウンド2 #74
+	src:'sound/asiaStage/tekishi2.wav'
+},
+{ // 笛子サウンド3 #75
+	src:'sound/asiaStage/tekishi3.wav'
+},
+{ // 笛子サウンド4 #76
+	src:'sound/asiaStage/tekishi4.wav'
+},
+
+{ // 二胡サウンド2 #77
+	src:'sound/asiaStage/niko2.wav'
+},
+{ // 二胡サウンド3 #78
+	src:'sound/asiaStage/niko3.wav'
+},
+{ // 二胡サウンド4 #79
+	src:'sound/asiaStage/niko4.wav'
+},
+
+{ // 琴サウンド2 #80
+	src:'sound/asiaStage/koto2.wav'
+},
+{ // 琴サウンド3 #81
+	src:'sound/asiaStage/koto3.wav'
+},
+{ // 琴サウンド4 #82
+	src:'sound/asiaStage/koto4.wav'
+}
 
 //  -------------------------- < ヨーロッパステージ > ----------------------------
 	// { // 背景 #29
