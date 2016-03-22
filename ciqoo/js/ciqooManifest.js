@@ -686,6 +686,8 @@ var manifest = [
 	src:'sound/asiaStage/koto4.wav'
 }
 
+// 変更
+
 //  -------------------------- < ヨーロッパステージ > ----------------------------
 	// { // 背景 #29
 	// 	src: 'img/europeStage/background.png',
