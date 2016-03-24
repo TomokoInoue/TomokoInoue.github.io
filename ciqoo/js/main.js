@@ -261,7 +261,7 @@ function playAmerica() {
 	// 二度クリックできないようにする
 	bitmapArr[8].removeAllEventListeners('click'); // アメリカの雲のクリックイベントを削除
 	bitmapArr[9].removeAllEventListeners('click'); // アジアの雲のクリックイベントを削除
-	bitmapArr[10].removeAllEventListeners('click'); // ヨーロッパの雲のクリックイベントを削除
+	// bitmapArr[10].removeAllEventListeners('click'); // ヨーロッパの雲のクリックイベントを削除
 	// console.log('アメリカだよ');
 
 	stage.addChild(americaContainer);
@@ -708,7 +708,7 @@ function backAmerica(){
 	// アジアステージへ
 	bitmapArr[9].addEventListener('click', playAsia);
 	// ヨーロッパステージへ
-	bitmapArr[10].addEventListener('click', playEurope);
+	// bitmapArr[10].addEventListener('click', playEurope);
 
 }
 
