@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>jQueryで作る先頭へのジャンプ機能</title>
+</head>
+<body style="text-align:center;">
+	<h1> jQueryで作る先頭へのジャンプ機能</h1>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<p>hello!</p>
+	<div id="back_to_top" style="position:fixed;right:5px;bottom:5px"><a href="#"><img src="img/kuma.png" alt="トップへ戻る"></a></div>
+	<div id="pos" style="position:fixed;left:5px;bottom:5px"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	// 即時関数
+	(function() {
+
+		// DOMの読み込み
+		$(function() {
+
+			// #back_to_topを消す
+			$('#back_to_top').hide();
+
+			// 一定の位置までスクロールされた時にボタンを表示、非表示
+			$(window).scroll(function() {
+
+				// 左下に取得したスクロールの垂直位置の数字をテキストで表示
+				$('#pos').text($(this).scrollTop());
+
+				// 取得したスクロールの垂直位置が60より大きかった場合
+				if ($(this).scrollTop() > 60) {
+					$('#back_to_top').fadeIn(); // フェードして表示
+				} else {
+					$('#back_to_top').fadeOut(); // フェードして非表示
+				}
+			});
+
+
+			// ページトップボタンがクリックされたら上に戻る処理
+			$('#back_to_top a').click(function() {
+				// スクロールの垂直位置が0にくるようアニメーション
+				$('body').animate({
+					scrollTop:0
+				}, 500);
+				return false;
+			})
+		});
+	});
+	</script>
+</body>
+</html>
