@@ -1,5 +1,6 @@
 // 即時関数
 (function() {
+	console.log('はじまるよ');
 
 	// DOMの読み込み
 	$(function() {
