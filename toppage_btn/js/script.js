@@ -1,6 +1,5 @@
 // 即時関数
-// (function() {
-// 	console.log('はじまるよ');
+(function() {
 
 	// DOMの読み込み
 	$(function() {
@@ -32,4 +31,4 @@
 			return false;
 		})
 	});
-// });
+});
