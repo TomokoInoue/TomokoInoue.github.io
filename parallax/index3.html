@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>パララックス3</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            background: #eee;
+        }
+        .box {
+            position: fixed;
+            opacity: 0.6;
+            left: 300px;
+        }
+        #box1 {
+            width: 40px;
+            height: 40px;
+            top: 140px;
+            background: red;
+        }
+        #box2 {
+            width: 50px;
+            height: 50px;
+            top: 155px;
+            background: blue;
+        }
+        #box3 {
+            width: 60px;
+            height: 60px;
+            top: 165px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+    </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+        // 即時関数
+        (function() {
+            'use strict';
+
+            // DOMの読み込み
+            $(function() {
+
+                $('#container').mousemove(function(e) {
+                    // マウスの縦軸と横軸の値を取得
+                    console.log(e.clientX, e.clientY);
+
+                    var  cx = $(this).width() / 2;
+                    var  cy = $(this).height() / 2;
+                    var  dx = e.clientX - cx;
+                    var  dy = e.clientY - cy;
+
+                    // 横方向の移動
+                    $('#box1').css('left', cx + dx * 1.1);
+                    $('#box2').css('left', cx + dx * 1.3);
+                    $('#box3').css('left', cx + dx * 1.5);
+
+                    // 縦方向の移動
+                    $('#box1').css('top', cy + dy * 1.0);
+                    $('#box2').css('top', cy + dy * 1.1);
+                    $('#box3').css('top', cy + dy * 1.3);
+                });
+            });
+        })();
+	</script>
+</body>
+</html>
