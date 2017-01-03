@@ -29,6 +29,8 @@
 			$('body').animate({
 				scrollTop:0
 			}, 500);
+
+			// a要素に対してclickイベントを実行した後にリンク先に移動してしまうのを防ぐ
 			return false;
 		})
 	});
