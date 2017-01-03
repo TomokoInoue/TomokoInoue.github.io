@@ -1,6 +1,6 @@
 // 即時関数
 (function() {
-	
+
 	// DOMの読み込み
 	$(function() {
 
@@ -23,7 +23,8 @@
 
 
 		// ページトップボタンがクリックされたら上に戻る処理
-		$('#back_to_top a').click(function() {
+		// $('#back_to_top a').click(function() {
+		$('#back_to_top a').on('click', function() {
 			// スクロールの垂直位置が0にくるようアニメーション
 			$('body').animate({
 				scrollTop:0
