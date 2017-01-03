@@ -17,7 +17,7 @@
 		width: 100px;
 		height: 100px;
 		background-color: #ccc;
-		/*transition: 1s ease-in-out;*/
+		transition: 1s ease-in-out;
 	}
 	</style>
 </head>
@@ -35,10 +35,10 @@
 		$('#btn').on('click', function() {
 
 			// ①「css」メソッドを使う場合、CSSで「transition」プロパティが必要
-			$('#box').css({'top':'100px', 'left':'200px'});
+			// $('#box').css({'top':'100px', 'left':'200px'});
 
 			// ②「animate」メソッドを使う場合（いっぺんに動かす時）
-			$('#box').animate({'top':'100px', 'left':'100px'});
+			// $('#box').animate({'top':'100px', 'left':'100px'});
 
 			// ②「animate」メソッドを使う場合（一つ一つ動かす時）
 			$('#box').animate({'top':'100px'})
