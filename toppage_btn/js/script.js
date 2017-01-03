@@ -25,6 +25,7 @@
 		// ページトップボタンがクリックされたら上に戻る処理
 		// $('#back_to_top a').click(function() {
 		$('#back_to_top a').on('click', function(event) { // on() = 複数のイベントを定義できる。clickよりも便利。
+			// 「return false」の代わり
 			event.preventDefault();
 
 			// スクロールの垂直位置が0にくるようアニメーション
