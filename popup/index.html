@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>ポップアップ</title>
+</head>
+<body>
+<ul class="share_btn">
+    <li class="fb"><a href="https://www.facebook.com/sharer/sharer.php?u=http://ent.kodansha.co.jp/godzilla/" class="js-fb">facebookでシェアする</a></li>
+    <li class="tw"><a href="https://twitter.com/intent/tweet?url=http://ent.kodansha.co.jp/godzilla/&text=「ゴジラ全映画DVDコレクターズBOX」2016年7月12日(火)創刊！東宝チャンピオンまつり版や海外公開版を含む全51巻を予定！「お宝アイテム」も毎号収録！創刊記念「怪獣IQテスト」「プレゼントキャンペーン」実施中！&hashtags=ゴジラ" class="js-tw">Twitterでツイートする</a></li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    $(function() {
+        // Facebookシェアボタン
+        $('.js-fb').on('click', function(evt){
+            evt.preventDefault(); // return falseの代わり
+            // ポップアップを表示する処理へ引数を渡す
+            popupSns(this.href, 700, 450, 'fbwindow');
+        });
+
+        // ツイートボタンクリック
+        $('.js-tw').on('click', function(evt){
+            evt.preventDefault(); // return falseの代わり
+            // ポップアップを表示する処理へ引数を渡す
+            popupSns(this.href, 550, 420, 'tweetwindow');
+        });
+
+        // SNSのポップアップを表示するための処理
+        function popupSns(href, w, h, winName, aIndex){
+            var x = (screen.width - w) / 2;
+            var y = (screen.height - h) / 2;
+            var url = encodeURI(decodeURI(href));
+
+            // window.openメソッドで小窓のウィンドウを生成する
+            window.open(url, winName, 'left=' + x +', top=' + y + ', width=' + w + ', height=' + h + ', personalbar=0, toolbar=0, scrollbars=1, sizable=1');
+        }
+    });
+    </script>
+</body>
+</html>
