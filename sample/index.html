@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>sample</title>
+	<link rel="stylesheet" href="">
+	<style>
+	.inner {
+		width: 500px;
+		height: 300px;
+		border: 1px solid #000;
+	}
+	#box {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 100px;
+		height: 100px;
+		background-color: #ccc;
+		/*transition: 1s ease-in-out;*/
+	}
+	</style>
+</head>
+<body>
+	<div class="inner">
+		<div id="box"></div>
+	</div>
+	<button id="btn" type="button" name="button">クリック</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	/*-----------------------------
+		jQueryでのアニメーション
+	-----------------------------*/
+	$(function() {
+		$('#btn').on('click', function() {
+
+			// ①「css」メソッドを使う場合、CSSで「transition」プロパティが必要
+			// $('#box').css({'top':'100px', 'left':'200px'});
+
+			// ②「animate」メソッドを使う場合（いっぺんに動かす時）
+			// $('#box').animate({'top':'100px', 'left':'100px'});
+
+			// ②「animate」メソッドを使う場合（一つ一つ動かす時）
+			$('#box').animate({'top':'100px'})
+					 .animate({
+							   'left':'100px',
+					 		   'duration': 1500, // 1.5秒かけて
+							   'easing': 'swing', // 動き方
+						    });
+		});
+	});
+	</script>
+</body>
+</html>
