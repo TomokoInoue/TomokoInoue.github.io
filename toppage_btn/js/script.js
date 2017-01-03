@@ -24,14 +24,17 @@
 
 		// ページトップボタンがクリックされたら上に戻る処理
 		// $('#back_to_top a').click(function() {
-		$('#back_to_top a').on('click', function() { // on() = 複数のイベントを定義できる。clickよりも便利。
+		$('#back_to_top a').on('click', function(event) { // on() = 複数のイベントを定義できる。clickよりも便利。
+			event.preventDefault();
+
 			// スクロールの垂直位置が0にくるようアニメーション
 			$('body').animate({
 				scrollTop:0
 			}, 500);
 
-			// a要素に対してclickイベントを実行した後にリンク先に移動してしまうのを防ぐ
-			return false;
+			// inputのsubmitや、a要素では、クリック時などにあるデフォルトのイベントの発火を止める（親要素のバブリングを無効化する）
+			// 戻り値がないということを明示的に表す
+			// return false;
 		})
 	});
 })();
