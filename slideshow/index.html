@@ -2,13 +2,18 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="">
 	<style>
+	/*---------------------
+	CSSの書き方
+	---------------------*/
 	.slideshow {
-            position: relative;
-            height: 600px;
-    }
+		position: relative;
+		height: 600px;
+	}
 	.slideshow li {
 		position: absolute;
 		z-index: 0;
@@ -19,65 +24,140 @@
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
+		text-indent: -9999px;
 	}
+	.slideshow li.slide1 {
+		background: url(img/mv_slide_bg_1.jpg);
+		background-size: cover;
+	}
+	.slideshow li.slide2 {
+		background: url(img/mv_slide_bg_2.jpg);
+		background-size: cover;
+	}
+	@media screen and (max-width: 768px) {
+		.slideshow {
+			height: 0;
+			padding-bottom: 117.1875%;
+		}
+		.slideshow li.slide1 {
+			width: 100%;
+			background: url(img/mv_slide_bg_1_sp.jpg);
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
+		.slideshow li.slide2 {
+			width: 100%;
+			background: url(img/mv_slide_bg_2_sp.jpg);
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
+	}
+
+	/*---------------------
+	Sassの書き方
+	---------------------*/
+	/*.slideshow {
+        position: relative;
+        height: 600px;
+        li {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            @for $i from 0 through 2 {
+                &.slide#{$i} {
+                    background: url(#{$imgPath}mv_slide_bg_#{$i}.jpg);
+                    background-size: cover;
+                }
+            }
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        @include smartphone {
+            height: 0;
+            padding-bottom: percentage(750 / 640);
+            li {
+                @for $i from 0 through 2 {
+                    &.slide#{$i} {
+                        width: 100%;
+                        background: url(#{$imgPath}mv_slide_bg_#{$i}_sp.jpg);
+                        background-size: 100% auto;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }*/
 	</style>
 </head>
 <body>
 	<ul class="slideshow js-slideshow">
-            <li class="slide1"></li>
-            <li class="slide2"></li>
+        <li class="slide1">スライド1</li>
+        <li class="slide2">スライド2</li>
     </ul>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
-	;(function (w) {
+	(function () {
+		// DOMの読み込み
 	    $(function () {
+	        /* =================================
+	         スライドショーの表示 やり方その①
+	         ================================ */
+            var $slideshow = $('.js-slideshow');
+            var $imgItems = $slideshow.find('li'); // find:すべての子要素を取得する
+            var slideLen = $imgItems.length; // li要素の数
+            var slideTimer;
 
-	        /* ==========================
-	         スライドショーの表示
-	         ========================== */
-	        function movieSlideshow(){
-	            var $slideshow = $('.slideshow');
-	            var $imgItems = $slideshow.find('li'); // find:要素の取得する
-	            var slideLen = $imgItems.length;
-	            var slideTimer;
+            // スライドが切り替わる間隔
+            var waitTime = 4000;
+            // フェードアニメーションの時間
+            var animTime = 1500;
+            // 現在のスライド番号をリセット
+            var currentNum = 0;
 
-	            // スライドが切り替わる間隔
-	            var waitTime = 4000;
+            // 最初の要素以外を非表示に
+            $imgItems.not(':first-child').hide(); // not:指定した条件式に合致する要素を削除する
 
-	            // フェードアニメーションの時間
-	            var animTime = 1500;
+			// 「setTimerFunc」を「waitTime（4秒間隔で）」呼び出す
+            setInterval(setTimerFunc, waitTime); // setInterval(関数名, 実行間隔):一定時間毎に特定の関数を繰り返す
 
-	            // 現在のスライド番号をリセット
-	            var currentNum = 0;
+            // setIntervalで実行する関数
+            function setTimerFunc(){
+                $imgItems.stop(); // stop:windowの読み込みを停止する
 
-	            // 最初の要素以外を非表示に
-	            $imgItems.not(':first-child').hide(); // not:指定した条件式に合致する要素を削除する
+                // 次のスライドを手前に置くために現在のスライドを奥に配置
+                $imgItems.eq(currentNum).css('z-index', 0); // eq(i):指定したポジション(i)の要素だけを取得する
 
-				// setInterval:一定時間毎に特定の関数を繰り返す
-				// 「setTimerFunc」を「waitTime（4秒間隔で）」呼び出す
-	            setInterval(setTimerFunc, waitTime);
+                // 次のスライド番号を格納
+                currentNum = (currentNum + 1) % slideLen;
 
-	            // setIntervalで実行する関数
-	            function setTimerFunc(){
-					// stop:windowの読み込みを停止する
-	                $imgItems.stop();
-	                // 次のスライドを手前に置くために現在のスライドを奥に配置
-	                $imgItems.eq(currentNum).css('z-index', 0); // eq(i):指定したポジション(i)の要素だけを取得する
-	                // 次のスライド番号を格納
-	                currentNum = (currentNum + 1) % slideLen;
+                // 指定のスライドをフェードイン
+                $imgItems.eq(currentNum).css('z-index', 1).fadeIn(animTime, function(){ // fadeIn(スピード, 効果完了後の処理)
+                    // 指定のスライド以外を非表示に
+                    $imgItems.not(this).hide();
+                });
+            }
 
-	                // 指定のスライドをフェードイン
-	                $imgItems.eq(currentNum).css('z-index', 1).fadeIn(animTime, function(){
-	                    // 指定のスライド以外を非表示に
-	                    $imgItems.not(this).hide();
-	                });
-	            }
-	        }
 
-	        movieSlideshow();
-
+			/* =================================
+	         スライドショーの表示 やり方その②
+	         ================================ */
+			// var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+			// var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+			// $(".slideshow ul li").css({"position":"relative","overflow":"hidden"});
+			// $(".slideshow ul li").hide().css({"position":"absolute","top":0,"left":0});
+			// $(".slideshow ul li:first").addClass("active").show();
+			// setInterval(function(){
+			// 	var $active = $(".slideshow ul li.active");
+			// 	var $next = $active.next("li").length?$active.next("li"):$(".slideshow ul li:first");
+			// 	$active.fadeOut($fade_speed).removeClass("active");
+			// 	$next.fadeIn($fade_speed).addClass("active");
+			// },$interval);
 	    });
-	})(window);
+	})();
 	</script>
 </body>
 </html>
