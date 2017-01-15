@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+<link href="../../_common/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	<h1>やることリスト</h1>
+	<ul id="list">
+	</ul>
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+<script>
+	var todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
+
+	// 配列の最後のデータを削除する
+	todo.pop();
+
+	// 配列の最後のデータを追加する
+	todo.push('歯医者に行く');
+
+	// 配列の最初のデータを削除する
+	todo.shift();
+
+	// 配列の最初にデータ1、データ2を追加する
+	todo.unshift('タスク確認', '見積もり');
+
+	for(var i = 0; i < todo.length; i++) {
+		var li = document.createElement('li');
+		li.textContent = todo[i];
+		document.getElementById('list').appendChild(li); // appendChild():取得した要素に対して子要素を挿入する
+	}
+</script>
+</body>
+</html>
