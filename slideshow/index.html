@@ -118,13 +118,17 @@
             // 現在のスライド番号をリセット
             var currentNum = 0;
 
+
             // 最初の要素以外を非表示に
             $imgItems.not(':first-child').hide(); // not:指定した条件式に合致する要素を削除する
 
 			// 「setTimerFunc」を「waitTime（4秒間隔で）」呼び出す
             setInterval(setTimerFunc, waitTime); // setInterval(関数名, 実行間隔):一定時間毎に特定の関数を繰り返す
 
-            // setIntervalで実行する関数
+
+            /*---------------------------
+			setIntervalで処理を繰り返す
+			---------------------------*/
             function setTimerFunc(){
                 $imgItems.stop(); // stop:windowの読み込みを停止する
 
