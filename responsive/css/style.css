@@ -1,0 +1,14 @@
+#container{
+    width: 950px;
+    margin: 50px auto;
+    background-color: #EEEEEE;
+}
+
+#left{
+    width: 300px;
+    background-color: #aaeeff;
+}
+#right{
+    width: 500px;
+    background-color: #ffeecc;
+}
