@@ -1,0 +1,38 @@
+#container{
+    width: 950px;
+    margin: 50px auto;
+    background-color: #EEEEEE;
+	display: flex;
+	justify-content: space-between;
+}
+
+#left{
+    width: 300px;
+    background-color: #aaeeff;
+	padding: 50px 0 200px;
+}
+#right{
+    width: 500px;
+    background-color: #ffeecc;
+	padding: 50px 0 200px;
+}
+
+@media(max-width: 768px) {
+	/* スマホサイトの指定 */
+	#container {
+		width: 100%;
+		background-color: #ff0000;
+		display: block;
+		justify-content: flex-start;
+	}
+
+	#left{
+	    width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+	#right{
+	    width: 100%;
+		box-sizing: border-box;
+	}
+}
