@@ -17,7 +17,7 @@
 	----------------------- */
 	// スタートボタンを押した時
 	function start() {
-		if (intervalId != null) {
+		if (intervalId !== null) {
 			return;
 		}
 		intervalId = setInterval(function() {
@@ -50,8 +50,9 @@
 
 	// 文字を表示させる処理
 	function render() {
+		// 分の計算(passedTime : 経過秒の値)
 		var minutes = Math.floor(passedTime / 60);
-		// 60で割った時のあまりを代入
+		// 秒の計算(passedTime : 経過秒の値)
 		var seconds = passedTime % 60;
 		// ドキュメント（HTML文書）からidを取得し、変数にする
 		timer.textContent = zeroFill(minutes) + ':' + zeroFill(seconds);
@@ -93,4 +94,4 @@
 	// 	+ ':' + zeroFill(minutes)
 	// 	+ ':' + zeroFill(seconds);
 	// }, 1000); // ms ミリ秒
-}());
+})();
