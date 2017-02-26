@@ -1,0 +1,184 @@
+/*css-CONCEPT*/
+
+/*COMMON-------------------------------------*/
+body{
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	line-height: 1.8;
+  background-color: #000000;
+}
+.inner{
+  width: 960px;
+  margin: 0 auto;
+}
+a:link, a:visited{
+  color: #000000;
+  text-decoration: none;
+}
+.clearfix:after{
+  content: " ";
+  clear: both;
+  display: block;
+}
+
+@media (max-width:768px) {
+  body{
+    font-size: 11px;
+  }
+  .inner{
+    width: 90%;
+  }
+}
+
+
+/*HEADER-------------------------------------*/
+header{
+}
+
+/*NAV*/
+nav{
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+}
+nav .inner{
+}
+nav #logoFlag{
+  float: left;
+}
+nav #navMenu{
+  font-family: "rift-soft", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 40px;
+}
+nav #menuButton{
+  display: none;
+}
+nav #menuWrap{
+}
+nav ul{
+}
+nav ul li{
+  float: left;
+  margin-left: 60px;
+}
+nav #snsNav{
+  float: right;
+}
+nav #snsNav img{
+  margin-left: 10px;
+  cursor: pointer;
+}
+nav a:link,
+nav a:visited{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+nav .current a:link,
+nav .current a:visited{
+  color: #c00e53;
+}
+nav a:hover,
+nav a:active{
+  color: #c00e53;
+}
+
+@media (max-width:768px) {
+  nav{
+  }
+  nav .inner{
+  }
+  nav #logoFlag img{
+    height: 120px;
+  }
+  nav #navMenu{
+    width: 120px;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+  }
+  nav #menuButton{
+    display: block;
+    width: 90px;
+    color: #FFFFFF;
+    background: url(../img/burgerMenu.png)right center no-repeat;
+    margin: 0 0 20px;
+    cursor: pointer;
+  }
+  nav #menuWrap{
+    display: none;
+  }
+  nav ul{
+  }
+  nav ul li{
+    width: 120px;
+    padding: 10px 0;
+    margin: 0;
+    background-color: #000000;
+  }
+  nav #snsNav{
+    padding: 0;
+  }
+  nav #snsNav img{
+    padding: 10px 20px;
+    margin: 0;
+  }
+}
+
+/*CONTENTS-----------------------------------*/
+#contents{
+  background: url(../img/ph_bgConcept.jpg) left top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 220px 0 300px;
+}
+#contents section{
+  text-align: center;
+}
+#contents #pageTitle{
+  font-family: "rift-soft", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 100px;
+}
+#contents p{
+  font-size: 14px;
+  line-height: 3.5;
+}
+#contents p span{
+  font-family: "rift-soft", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+#contents figure{
+  margin: 100px;
+}
+
+@media (max-width:768px) {
+  #contents{
+    height: 100%;
+  }
+}
+
+
+/*FOOTER-------------------------------------*/
+footer{
+  height: 40px;
+  font-family: "rift-soft", sans-serif;
+  font-size: 10px;
+  text-align: right;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding-top: 16px;
+}
+
+@media (max-width:768px) {
+  footer{
+    text-align: center;
+  }
+}

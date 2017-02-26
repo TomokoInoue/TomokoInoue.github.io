@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONCEPT / MOJO JUICE BAR</title>
+  <script src="https://use.typekit.net/gnh4kbq.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <header>
+      <nav>
+        <div class="inner clearfix">
+          <h1 id="logoFlag"><img src="img/logo_flag.png" alt="MOJO juice bar" height="200"></h1>
+          <div id="navMenu">
+            <div id="menuButton">MENU</div>
+            <div id="menuWrap">
+              <ul class="clearfix">
+                <li><a href="../home/index.html">HOME</a></li>
+                <li><a href="../news/index.html">NEWS</a></li>
+                <li class="current"><a href="../concept/index.html">CONCEPT</a></li>
+                <li><a href="../menu/index.html">LINE UP</a></li>
+                <li><a href="../findus/index.html">FIND US</a></li>
+                <li id="snsNav">
+                  <img src="img/facebook.png" alt="facebook" height="18">
+                  <img src="img/twitter.png" alt="twitter" height="18">
+                  <a href="https://www.instagram.com/mojo_juice_bar/" target="_blank">
+                    <img src="img/instagram.png" alt="instagram" height="18">
+                  </a>
+                </li>
+              </ul>
+            </div><!-- /#menuWrap -->
+          </div><!-- /#navMenu -->
+        </div>
+      </nav>
+    </header>
+
+    <div id="contents">
+      <div class="inner">
+        <section>
+          <h2 id="pageTitle">ABOUT US</h2>
+          <p>
+            美容と健康の為に欠かせない「ビタミン」「ミネラル」「食物繊維」など<br>
+            多くの栄養素を含む野菜や果物。<br>
+            ジュースにする事で無駄なく効率的に摂取する事が出来ます。<br>
+            その鮮やかな色は心も体も元気にしてくれます。<br>
+            忙しい時でも、ジュースで手軽に栄養を補給して<br>
+            自分の体のことを考えてみてください。
+          </p>
+          <p>
+            <span>“MOJO”</span> とは、<br>
+            魔法の様に大きなパワーを持つもの。<br>
+            皆を虜にしてしまうもの。<br>
+            <br>
+            <span>“MOJO JUICE”</span> には太陽の恵みを受けた<br>
+            自然のパワーがたくさん詰まっています。<br>
+            その日の気分に合わせたジュースで<br>
+            体の中からリフレッシュして頂きたいと私達は考えています。<br>
+            自然の恵みがたくさん詰まった <span>“MOJO JUICE”</span> をお楽しみください。
+          </p>
+          <figure></figure>
+          <p>
+            食材は国内の農家から直接仕入れています。<br>
+            季節ごとに旬のものを提供して頂いています。<br>
+            砂糖を使用せずに自然の甘みを生かして調理しています。<br>
+            季節の新鮮な野菜や果物を使い、酸味や甘味に合わせて組合せは様々。<br>
+            最高の贅沢を毎日味わってください。
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <div class="inner">
+        <p><small>&copy; 2017 MOJO JUICE BAR ALL RIGHTS RESERVED</small></p>
+      </div>
+    </footer>
+  </div><!-- /#wrapper -->
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  $(function (){
+    $('#menuButton').on('click',function(){
+      // console.log('click');
+      $('#menuWrap').slideToggle();
+    });
+    $(window).resize(function(){
+      var winW = $(window).width();
+      if (winW < 768) {
+        $('#menuWrap').css('display','none');
+      }else {
+        $('#menuWrap').css('display','block');
+      }
+    });
+  });
+</script>
+
+
+</html>
