@@ -161,7 +161,8 @@ nav a:active{
 
 @media (max-width:768px) {
   #contents{
-    
+    width: 100%;
+    height: auto;
   }
 }
 
