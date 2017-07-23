@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="http://tomokoinoue.github.io/html-css_tips/share_icon/img/ogp.png">
+    <meta property="twitter:image" content="http://tomokoinoue.github.io/html-css_tips/share_icon/img/ogp.png">
+    <title>Share_icon</title>
+    <style>
+        body {
+            line-height: 1;
+        }
+        .box {
+            position: relative;
+            width: 980px;
+            margin: 0 auto;
+            padding-bottom: 640px;
+            background-color: #ccc;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .sns_wrap {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            width: 160px;
+            list-style: none;
+        }
+        a {
+            display: block;
+        }
+        @media screen and (max-width: 768px) {
+            .sns_wrap {
+                top: 4%;
+                right: 4%;
+                width: 28.8%;
+                margin: 0 auto;
+            }
+            .sns_wrap > li {
+                width: 40.74%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="sns_wrap">
+            <li><a class="js-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.pinterest.jp%2Fpinpon0521%2F"><img src="img/sns_fb.png" alt="Facebookでシェアする" width="70"></a></li>
+            <li><a class="js-tw" href="https://twitter.com/share?url=https%3A%2F%2Fwww.pinterest.jp%2Fpinpon0521%2F&text=%E3%81%84%E3%81%AE%E3%81%86%E3%81%88%E3%81%95%E3%82%93%E3%81%AE%E3%83%94%E3%83%B3%E3%82%BF%E3%83%AC%E3%82%B9%E3%83%88&hashtags=さつまいも https://www.pinterest.jp/pinpon0521/"><img src="img/sns_tw.png" alt="ツイートする" width="70"></a></li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
