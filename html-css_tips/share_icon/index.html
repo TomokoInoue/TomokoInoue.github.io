@@ -8,9 +8,11 @@
     <meta property="twitter:image" content="https://tomokoinoue.github.io/html-css_tips/share_icon/img/ogp.png">
     <title>Share_icon</title>
     <style>
+        /* 初期設定を解除 */
         body {
             line-height: 1;
         }
+        /* 大枠の指定 */
         .box {
             position: relative;
             width: 980px;
@@ -24,7 +26,8 @@
                 margin: 0 auto;
             }
         }
-        .sns_wrap {
+        .sns_wrap,
+        .sns_default_wrap {
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -32,6 +35,14 @@
             right: 60px;
             width: 160px;
             list-style: none;
+        }
+        .sns_default_wrap {
+            top: 160px;
+        }
+        @media screen and (max-width: 768px) {
+            .sns_default_wrap {
+                right: 4%;
+            }
         }
         a {
             display: block;
@@ -54,10 +65,22 @@
     </style>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="box">
         <ul class="sns_wrap">
             <li><a class="js-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.pinterest.jp%2Fpinpon0521%2F"><img src="img/sns_fb.png" alt="Facebookでシェアする" width="70"></a></li>
             <li><a class="js-tw" href="https://twitter.com/share?url=https%3A%2F%2Fwww.pinterest.jp%2Fpinpon0521%2F&text=%E3%81%84%E3%81%AE%E3%81%86%E3%81%88%E3%81%95%E3%82%93%E3%81%AE%E3%83%94%E3%83%B3%E3%82%BF%E3%83%AC%E3%82%B9%E3%83%88&hashtags=さつまいも https://www.pinterest.jp/pinpon0521/"><img src="img/sns_tw.png" alt="ツイートする" width="70"></a></li>
+        </ul>
+        <ul class="sns_default_wrap">
+            <li><div class="fb-like" data-href="https://www.pinterest.jp/pinpon0521/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div></li>
+            <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.pinterest.jp/pinpon0521/" data-text="いのうえさんのピンタレスト" data-via="pinpon0521" data-size="large" data-related="pinpon0521" data-hashtags="さつまいも">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
         </ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
