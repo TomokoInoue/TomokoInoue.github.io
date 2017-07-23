@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Howto_box</title>
+    <style>
+        /* -----------------
+         全体のCSS
+        -------------------*/
+        body, p {
+            margin: 0;
+            line-height: 1;
+        }
+        .recipe {
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            margin: 30px auto 0;
+            list-style: none;
+        }
+        @media screen and (max-width: 768px) {
+            .recipe {
+                display: block;
+                width: 90.66%;
+                margin-top: 8.82%;
+                padding: 0;
+            }
+        }
+
+        /* -----------------
+         高さが共通の枠のCSS
+         -------------------*/
+        .recipe > li {
+            width: 184px;
+        }
+        @media screen and (max-width: 768px) {
+            .recipe > li {
+                width: 100%;
+                margin-bottom: 8.82%;
+            }
+        }
+        /* 画像 */
+        @media screen and (max-width: 768px) {
+            .recipe_photo {
+                width: 100%;
+            }
+            .recipe_photo > img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        /* 説明文 */
+        .box {
+            height: 130px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                height: auto;
+                padding-bottom: 44.11%;
+                border: 2px solid #ccc;
+                border-top: none;
+            }
+        }
+        .box > p {
+            width: 150px;
+            margin: 0 auto;
+            padding-top: 14px;
+        }
+        @media screen and (max-width: 768px) {
+            .box > p {
+                width: 80%;
+                padding-top: 5.88%;
+                font-size: 4.53vw;
+                line-height: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="recipe">
+        <li>
+            <p class="recipe_photo"><img src="img/num_1.png" alt="手順1" width="184"></p>
+            <div class="box"><p>豆腐をいい感じに切る</p></div>
+        </li>
+        <li>
+            <p class="recipe_photo"><img src="img/num_2.png" alt="手順2" width="184"></p>
+            <div class="box"><p>めんつゆっぽい色になるぐらい泡立てる</p></div>
+        </li>
+        <li>
+            <p class="recipe_photo"><img src="img/num_3.png" alt="手順3" width="184"></p>
+            <div class="box"><p>鍋の汚れをとる</p></div>
+        </li>
+        <li>
+            <p class="recipe_photo"><img src="img/num_4.png" alt="手順4" width="184"></p>
+            <div class="box"><p>長ネギをザクザク切る（途中でつまみ食いしないこと）</p></div>
+        </li>
+        <li>
+            <p class="recipe_photo"><img src="img/num_5.png" alt="手順5" width="184"></p>
+            <div class="box"><p>長ネギとしいたけをバットに並べて完成</p></div>
+        </li>
+    </ul>
+</body>
+</html>
