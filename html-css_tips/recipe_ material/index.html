@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipe_material</title>
+    <style>
+        /* 共通CSS */
+        .wrap {
+            width: 400px;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 768px) {
+            .wrap {
+                width: 90.66%;
+            }
+        }
+        h1 {
+            border-bottom: 1px solid #aaa;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 5.33vw;
+            }
+        }
+        /* 材料エリア */
+        table {
+            width: 100%;
+            margin: 0 auto;
+        }
+        th, td {
+            padding: 0 17px;
+            font-size: 14px;
+            text-align: left;
+            line-height: 2.1em;
+        }
+        td {
+            text-align: right;
+        }
+        @media screen and (max-width: 768px) {
+            th, td {
+                padding: 0 4.41%;
+                font-size: 3.2vw;
+            }
+        }
+        /* 「A」「B」 */
+        .row_group {
+            padding-right: 0;
+            position: relative;
+            width: 1em;
+            text-align: left;
+            vertical-align: middle;
+        }
+        .row_group:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -8px;
+            margin: auto 0;
+            background-repeat: no-repeat;
+        }
+        .row_group.row2:after {
+            width: 4px;
+            height: 48px;
+            background-image: url(img/parenthesis_row2.png);
+        }
+        .row_group.row3:after {
+            width: 4px;
+            height: 77px;
+            background-image: url(img/parenthesis_row3.png);
+        }
+        .row_group.row4:after {
+            right: -10px;
+            width: 6px;
+            height: 110px;
+            background-image: url(img/parenthesis_row4.png);
+        }
+        @media screen and (max-width: 768px) {
+            table {
+                width: 85.29%;
+            }
+            th, td {
+                padding: 0;
+                font-size: 12px;
+                line-height: 2em;
+            }
+            .row_group {
+                padding-right: 12px;
+            }
+            .row_group:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 4px;
+                width: 4px;
+                margin: auto 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .row_group.row2:after {
+                height: 40px;
+                background-image: url(img/sp_parenthesis_row2.png);
+            }
+            .row_group.row3:after {
+                height: 65px;
+                background-image: url(img/sp_parenthesis_row3.png);
+            }
+            .row_group.row4:after {
+                right: 2px;
+                height: 90px;
+                background-image: url(img/sp_parenthesis_row4.png);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>レシピ</h1>
+        <table>
+            <tr>
+                <th colspan="2">ごはん</th>
+                <td>60g</td>
+            </tr>
+            <tr>
+                <th colspan="2">スーパーで売ってる美味しそうな<br>焼き魚</th>
+                <td>60g</td>
+            </tr>
+            <tr>
+                <td class="row_group row2" rowspan="2">A</td>
+                <th>コショウ</th>
+                <td>少々</td>
+            </tr>
+            <tr>
+                <th>しょうゆ</th>
+                <td>小さじ1</td>
+            </tr>
+            <tr>
+                <td class="row_group row3" rowspan="3">B</td>
+                <th>さいつまいも</th>
+                <td>100g</td>
+            </tr>
+            <tr>
+                <th>やまいも</th>
+                <td>100g</td>
+            </tr>
+            <tr>
+                <th>さといも</th>
+                <td>100g</td>
+            </tr>
+            <tr>
+                <td class="row_group row4" rowspan="4">C</td>
+                <th>しらたき</th>
+                <td>1個</td>
+            </tr>
+            <tr>
+                <th>こんにゃく</th>
+                <td>2本</td>
+            </tr>
+            <tr>
+                <th>玉こんにゃく</th>
+                <td>5個</td>
+            </tr>
+            <tr>
+                <th>マロニーちゃん</th>
+                <td>3本</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
