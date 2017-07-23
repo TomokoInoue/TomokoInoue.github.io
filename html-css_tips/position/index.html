@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+        /* --------------------
+         共通のCSS
+         --------------------- */
+        .txt {
+            text-align: center;
+        }
+
+        /* --------------------
+         上下中央に寄せるCSS
+         --------------------- */
+        .box {
+            position: fixed; /* スクロールしても位置を固定する */
+            width: 300px;
+            margin: -150px; /* widthのマイナス半分のサイズ */
+            padding: 100px 0;
+            top: 50%;
+            left: 50%;
+            background-color: #ccc;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 40%;
+                margin: -20%;
+                padding: 13.33% 0;
+            }
+            .txt {
+                font-size: 2.13vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><p class="txt">今日も1日がんばったよね</p></div>
+</body>
+</html>
