@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bg_obj</title>
+    <style>
+        .wrap {
+            background: url(img/bg_wood.jpg) center top;
+        }
+        .bg_obj {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: url(img/bg_obj.png) no-repeat center top;
+        }
+        h1 {
+            margin-top: 0;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .lead, p {
+            width: 980px;
+            margin: 0 auto;
+        }
+        .lead {
+            margin-bottom: 100px;
+        }
+        .cloth_contents {
+            position: relative;
+            background: url(img/bg_cloth.jpg) 0 0;
+        }
+        .cloth_contents::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -50px;
+            width: 100%;
+            height: 50px;
+            background: url(img/bg_cloth_top.png) repeat-x center top;
+        }
+        .cloth_contents::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            height: 50px;
+            background: url(img/bg_cloth_bottom.png) repeat-x center top;
+        }
+        h2, .txt {
+            position: relative;
+            z-index: 3;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bg_obj"></div>
+        <h1>タイトル</h1>
+        <p class="lead">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <div class="cloth_contents">
+            <h2>中タイトル</h2>
+            <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <h2>中タイトル</h2>
+            <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <h2>中タイトル</h2>
+            <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <h2>中タイトル</h2>
+            <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+    </div>
+</body>
+</html>
