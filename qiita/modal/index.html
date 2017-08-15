@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modal</title>
+    <style>
+        body {
+            height: 3000px;
+            margin: 0;
+            background: url(img/bg.png) no-repeat 50% 0;
+        }
+        .modal_open_btn {
+            margin-top: 100px;
+            text-align: center;
+        }
+        /* モーダル */
+        .modal_wrap {
+            position: fixed;
+            top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+            z-index: 100;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            animation: fadeIn 0.2s ease-out;
+        }
+        .modal_wrap.hidden {
+            display: none;
+        }
+        .modal_wrap.fadeOut {
+            animation: fadeOut 0.2s ease-out;
+        }
+        .modal_content {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+            width: 880px;
+            height: 500px;
+            margin: auto;
+            background-color: #ccc;
+            animation: scaleIn 0.4s ease-out;
+        }
+        .modal_close_btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+        }
+        /* モーダルの半透明背景 */
+        .modal_overlay {
+            position: fixed;
+            top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+        @keyframes fadeIn {
+            0% {
+            	opacity: 0;
+            }
+            100% {
+            	opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+            	opacity: 0;
+            }
+            100% {
+            	opacity: 1;
+            }
+        }
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0.4);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body id="top">
+    <p class="modal_open_btn"><a href="#modal" class="js-modal"><img src="img/stamp.png" alt="スタンプ"></a></p>
+    <div class="modal_wrap hidden" id="modal">
+        <div class="modal_content">
+            <p class="modal_close_btn"><a href=""><img src="img/modal_close_btn.png" alt="閉じる" width="48"></a></p>
+        </div>
+        <div class="modal_overlay"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
