@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .stamp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin: -100px 0 0 -100px;
+            animation: stamp 2.5s infinite;
+            transform: rotate(-20deg);
+        }
+        @keyframes stamp {
+            0% {
+                transform: rotate(-20deg);
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+            100% {
+                transform: rotate(-20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="stamp">
+        <img src="img/stamp.png" alt="スタンプ">
+    </p>
+</body>
+</html>
