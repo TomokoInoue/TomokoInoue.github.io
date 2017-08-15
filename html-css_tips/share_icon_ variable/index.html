@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="https://tomokoinoue.github.io">
+    <meta property="og:image" content="https://tomokoinoue.github.io/html-css_tips/share_icon/img/ogp.png">
+    <meta property="twitter:image" content="https://tomokoinoue.github.io/html-css_tips/share_icon/img/ogp.png">
+    <title>Share_icon_variable</title>
+    <style>
+        /* 初期設定を解除 */
+        body {
+            line-height: 1;
+        }
+        /* 大枠の指定 */
+        .box {
+            position: relative;
+            width: 980px;
+            margin: 0 auto;
+            padding-bottom: 640px;
+            background-color: #ccc;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .sns_wrap {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            width: 160px;
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            display: block;
+        }
+        @media screen and (max-width: 768px) {
+            .sns_wrap {
+                top: 4%;
+                right: 4%;
+                width: 28.8%;
+                margin: 0 auto;
+            }
+            .sns_wrap > li {
+                width: 40.74%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="sns_btns" class="box">
+        <ul class="sns_wrap">
+            <li><a class="js-fb" href=""><img src="img/sns_fb.png" alt="Facebookでシェアする" width="70"></a></li>
+            <li><a class="js-tw" href=""><img src="img/sns_tw.png" alt="ツイートする" width="70"></a></li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
