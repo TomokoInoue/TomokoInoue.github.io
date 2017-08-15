@@ -10,7 +10,7 @@
         }
 
         var $modalWindow = $contentArea.find('.modal_wrap');
-        var $closeBtn = $contentArea.find('.close_modal');
+        var $closeBtn = $contentArea.find('.modal_close_btn');
         var $overlay = $modalWindow.find('.modal_overlay');
 
         // モーダルの表示
