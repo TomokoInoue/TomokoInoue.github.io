@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<style>
+		.barchart {
+			width: 500px;
+			margin: 30px auto;
+			border: 2px solid #ccc;
+		}
+		[class*=graph] {
+			height: 40px;
+			margin: 10px 0;
+			background-color: #ccc;
+			animation: graph_anime 1s ease;
+		}
+		.graph1 {
+			width: 60%;
+			background-color: #0c9;
+		}
+		.graph2 {
+			width: 40%;
+			background-color: #09c;
+		}
+		.graph3 {
+			width: 80%;
+			margin-left: 400px;
+			background-color: #0cc;
+			animation: graph_anime_right 1s ease;
+		}
+		@keyframes graph_anime {
+			0% {
+				width: 0px;
+			}
+		}
+		@keyframes graph_anime_right {
+			0% {
+				width: 0px;
+			}
+			100% {
+				margin-left: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="barchart">
+		<div class="graph1"></div>
+		<div class="graph2"></div>
+		<div class="graph3"></div>
+	</div>
+</body>
+</html>
