@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>text_side_line</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+    <style>
+        /* -----------------
+         テキスト両サイドの横棒のCSS
+         -------------------*/
+        h1 {
+            position: relative;
+			width: 300px;
+			margin: 0 auto;
+			font-size: 40px;
+            text-align: center;
+            line-height: 1em;
+        }
+
+        h1:before {
+            content: ''; /* 擬似要素に線を表示する部分を生成 */
+			display: block;
+			width: 50px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			border-top: 1px solid;
+        }
+
+		h1:after {
+			content: ''; /* 擬似要素に線を表示する部分を生成 */
+			display: block;
+			width: 50px;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			border-top: 1px solid;
+		}
+
+		@media screen and (max-width: 768px) {
+			h1 {
+				width: 80%;
+				font-size: 10vw;
+			}
+
+			h1:before, h1:after {
+				width: 16%;
+			}
+		}
+
+    </style>
+</head>
+<body>
+    <h1>タイトル</h1>
+</body>
+</html>
